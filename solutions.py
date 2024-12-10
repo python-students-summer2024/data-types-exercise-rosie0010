@@ -14,7 +14,7 @@ def calculate_profit():
     or "Profit: $2,300.00" for sales of $10,000, etc.
     """
 
-  total_sales = float(input("Please enter the projected amount of total sales: "))
+  total_sales = float(input("Please enter the projected amount of total sales: $"))
   profit = total_sales * (23 / 100)
   print(f'"Profit: ${profit:,.2f}" for sales of ${total_sales:,.2f}')
 
@@ -55,7 +55,7 @@ def calculate_miles_per_gallon():
       
     print(f"Miles driven: {miles_driven}")
     print(f"Gas used (gallons): {gallons_used}")
-    print(f"Miles per gallon: {MPG}")
+    print(f"Miles per gallon: {MPG:.2f}")
     
 
 def align_text():
