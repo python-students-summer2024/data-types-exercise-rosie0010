@@ -5,12 +5,18 @@ In this case, we focus on converting numeric data types to strings and vice-vers
 
 
 def calculate_profit():
-    """
+  """
     Imagine this scenario: a company has determined that its annual profit is typically 23 percent of total sales.
-    Complete this function so that it asks the user to enter in the projected amount of total sales and then displays the profit that will be made from that amount.
+    Complete this function so that it asks the user to enter in the projected amount of total sales and 
+    then displays the profit that will be made from that amount.
     You can assume the user will enter only numeric characters, e.g. "3000", not "$3,000.00"
-    The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, or "Profit: $2,300.00" for sales of $10,000, etc.
+    The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, 
+    or "Profit: $2,300.00" for sales of $10,000, etc.
     """
+
+  total_sales = float(input("Please enter the projected amount of total sales: "))
+  profit = total_sales * (23 / 100)
+  print(f'"Profit: ${profit:,.2f}" for sales of ${total_sales:,.2f}')
 
 
 def calculate_quotient_and_remainder():
@@ -22,6 +28,13 @@ def calculate_quotient_and_remainder():
       Enter number #2: 2
       2 goes into 5 a total of 2 times with a remainder of 1
     """
+  
+    num1 = int(input("Enter number #1: "))
+    num2 = int(input("Enter number #2: "))
+    quotient = num1 // num2
+    remainder = num1 % num2
+    print(f"{num2} goes into {num1} a total of {quotient} times with a remainder of {remainder}")
+
 
 
 def calculate_miles_per_gallon():
@@ -36,11 +49,20 @@ def calculate_miles_per_gallon():
       Miles per gallon: 2.2
     """
 
+    miles_driven = float(input("Enter the number of miles driven: "))
+    gallons_used = float(input("Enter the number of gallons of gas used: "))
+    MPG = miles_driven / gallons_used
+      
+    print(f"Miles driven: {miles_driven}")
+    print(f"Gas used (gallons): {gallons_used}")
+    print(f"Miles per gallon: {MPG}")
+    
 
 def align_text():
     """
     Complete this function such that it asks the user to enter in 3 price values (as floating point numbers).
-    The print out the price values so that they are formatted to two decimal places. Also make sure that the price values are right aligned and line up at the decimal point.
+    The print out the price values so that they are formatted to two decimal places. 
+    Also make sure that the price values are right aligned and line up at the decimal point.
     Here's a sample running of the program:
 
       Enter price #1: 1.55
@@ -53,3 +75,12 @@ def align_text():
       Price #2: $   10.00
       Price #3: $ 9532.60
     """
+    price1 = float(input("Enter price #1: "))
+    price2 = float(input("Enter price #2: "))
+    price3 = float(input("Enter price #3: "))
+    print()
+    print("Here are your prices!")
+    print()
+    print(f"Price #1: ${price1:>8.2f}")
+    print(f"Price #2: ${price2:>8.2f}")
+    print(f"Price #3: ${price3:>8.2f}")
