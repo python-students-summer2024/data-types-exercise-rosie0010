@@ -28,7 +28,6 @@ def calculate_quotient_and_remainder():
       Enter number #2: 2
       2 goes into 5 a total of 2 times with a remainder of 1
     """
-  
     num1 = int(input("Enter number #1: "))
     num2 = int(input("Enter number #2: "))
     quotient = num1 // num2
@@ -52,11 +51,9 @@ def calculate_miles_per_gallon():
     miles_driven = float(input("Enter the number of miles driven: "))
     gallons_used = float(input("Enter the number of gallons of gas used: "))
     MPG = miles_driven / gallons_used
-      
     print(f"Miles driven: {miles_driven}")
     print(f"Gas used (gallons): {gallons_used}")
     print(f"Miles per gallon: {MPG:.2f}")
-    
 
 def align_text():
     """
